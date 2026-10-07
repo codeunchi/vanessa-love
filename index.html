@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanessa ❤️</title>
+
+<style>
+body{
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.box{
+    text-align: center;
+}
+
+h1{
+    color: deeppink;
+    font-size: 50px;
+}
+
+p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+button{
+    padding: 15px 30px;
+    font-size: 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#ja{
+    background-color: red;
+    color: white;
+}
+
+#nein{
+    background-color: white;
+    color: black;
+    position: absolute;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>❤️</h1>
+    <p>Vanessa ist die Beste auf dieser Welt! ❤️</p>
+
+    <button id="ja" onclick="alert('Natürlich ist Vanessa die Beste! ❤️')">
+        Ja
+    </button>
+
+    <button id="nein">
+        Nein
+    </button>
+</div>
+
+<script>
+const neinButton = document.getElementById("nein");
+
+neinButton.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+
+    neinButton.style.left = x + "px";
+    neinButton.style.top = y + "px";
+});
+</script>
+
+</body>
+</html>
